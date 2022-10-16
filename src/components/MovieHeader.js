@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const MovieHeader = (props) => {
   const { appTitle } = props;
-  const displayFavorites = true;
+  const { displayFavorites } = props;
 
   return (
     <div className="table-title">
@@ -29,6 +29,7 @@ const MovieHeader = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
+    displayFavorites: state.favoritesReducer.displayFavorites,
     appTitle: state.movieReducer.appTitle,
   };
 };
