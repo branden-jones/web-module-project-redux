@@ -29,7 +29,7 @@ const MovieHeader = (props) => {
 };
 const mapStateToProps = (state) => {
   return {
-    appTitle: state.appTitle,
+    appTitle: state.movieReducer.appTitle,
   };
 };
 
